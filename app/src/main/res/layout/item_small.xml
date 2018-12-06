@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent" android:layout_height="104dp">
+
+
+    <FrameLayout
+            android:id="@+id/cardView"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    >
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bc_item_big"
+        >
+
+            <jeybi.me.drecorder.RoundedImageView
+                    android:id="@+id/imageViewVideo"
+                    android:layout_width="69dp"
+                    android:layout_height="64dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginLeft="16dp"
+            />
+
+
+
+
+
+
+            <TextView
+                    android:id="@+id/textViewTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@id/imageViewVideo"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="14dp"
+                    android:textColor="@color/white"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginLeft="16dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="17sp"
+            />
+
+            <ImageView
+                    android:id="@+id/imageFolder"
+                    android:layout_width="12dp" android:layout_height="12dp"
+                    android:src="@drawable/ic_folder"
+                    app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+                    app:layout_constraintLeft_toLeftOf="@id/textViewTitle"
+                    android:layout_marginTop="10dp"
+            />
+
+            <TextView
+                    android:id="@+id/textViewPath"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintLeft_toRightOf="@id/imageFolder"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintTop_toTopOf="@id/imageFolder"
+                    app:layout_constraintBottom_toBottomOf="@id/imageFolder"
+            />
+
+            <TextView
+                    android:id="@+id/textViewSize"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    app:layout_constraintLeft_toLeftOf="@id/textViewTitle"
+                    app:layout_constraintTop_toBottomOf="@id/textViewPath"
+                    android:layout_marginTop="8dp"
+            />
+
+            <TextView
+                    android:id="@+id/textViewDuration"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintLeft_toRightOf="@id/textViewSize"
+                    app:layout_constraintTop_toTopOf="@id/textViewSize"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/montserrat_medium"
+
+            />
+
+            <ImageView
+                    android:clickable="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:id="@+id/imageViewShare"
+                    android:layout_width="36dp" android:layout_height="36dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="4dp"
+                    android:src="@drawable/ic_share"
+                    android:padding="8dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+            <ImageView
+                    android:clickable="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:id="@+id/imageViewDelete"
+                    android:layout_width="36dp" android:layout_height="36dp"
+                    android:src="@drawable/ic_delete"
+                    android:padding="8dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="4dp"
+                    app:layout_constraintRight_toLeftOf="@id/imageViewShare"
+                    app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </FrameLayout>
+
+
+</FrameLayout>

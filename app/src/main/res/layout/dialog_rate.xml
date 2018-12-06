@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="300dp" android:layout_height="280dp" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:minHeight="280dp"
+        android:layout_gravity="center"
+        android:minWidth="300dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <android.support.constraint.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="300dp" android:layout_height="256dp"
+            android:minHeight="256dp"
+            android:minWidth="300dp"
+            android:background="@drawable/bc_ratingbar"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+    >
+
+
+
+        <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Do you love this app ?"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="80dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/colorPrimary"
+        />
+
+        <TextView
+                android:id="@+id/textContent"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:text="If you enjoyed using DRecorder please
+rate it on Google Play."
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textTitle"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/colorPrimary"
+                android:alpha="0.8"
+        />
+
+
+        <TextView
+                android:id="@+id/textViewRate"
+                android:layout_width="0dp" android:layout_height="60dp"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  app:layout_constraintRight_toRightOf="parent"
+                  android:gravity="center"
+                  android:text="RATE NOW !!!"
+                  android:textColor="@color/white"
+                  android:fontFamily="@font/montserrat_bold"
+                  android:textSize="20sp"
+                  android:background="?attr/selectableItemBackgroundBorderless"
+                  android:clickable="true"
+        />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+    <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieRating"
+            android:layout_width="300dp" android:layout_height="108dp"
+            app:lottie_fileName="trophy.json"
+            app:lottie_autoPlay="true"
+    />
+
+</RelativeLayout>
+

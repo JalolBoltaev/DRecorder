@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent" android:layout_height="146dp">
+
+
+    <FrameLayout
+            android:id="@+id/cardView"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    >
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bc_item_big"
+        >
+
+
+            <RelativeLayout
+                    android:id="@+id/rv_date"
+                    android:layout_width="100dp"
+                    android:layout_height="28dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/bc_date"
+            >
+
+                <TextView
+                        android:id="@+id/textViewDate"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:layout_centerInParent="true"
+                        android:text="01 JAN 2019"
+                        android:fontFamily="@font/montserrat_medium"
+                />
+
+            </RelativeLayout>
+
+
+            <ImageView android:layout_width="162dp" android:layout_height="0dp"
+
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintTop_toBottomOf="@id/rv_date"
+                       android:layout_marginTop="4dp"
+                       app:layout_constraintRight_toRightOf="parent"
+                       android:layout_marginRight="8dp"
+                       android:src="@drawable/ic_uzbekistan"
+            />
+
+
+            <ImageView
+                    android:id="@+id/imageMoon"
+                    android:layout_width="46dp" android:layout_height="46dp"
+                    android:src="@drawable/ic_moon"
+                    app:layout_constraintTop_toTopOf="@id/rv_date"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+            />
+
+            <TextView
+                    android:id="@+id/textViewPlaylist"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/imageMoon"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="16dp"
+                    android:text="PLAYLIST :"
+                    android:layout_marginTop="12dp"
+                    android:textSize="12sp"
+            />
+
+            <TextView
+                    android:id="@+id/textViewVideoCount"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/textViewPlaylist"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="16dp"
+                    android:text="0 recorded videos"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"
+            />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </FrameLayout>
+
+
+</FrameLayout>
